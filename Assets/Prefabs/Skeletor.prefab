@@ -71,6 +71,7 @@ GameObject:
   - component: {fileID: 195612056879863358}
   - component: {fileID: 114123942428920516}
   - component: {fileID: 114090046011186496}
+  - component: {fileID: 114585728717436086}
   m_Layer: 0
   m_Name: Skeletor
   m_TagString: Untagged
@@ -2112,6 +2113,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+--- !u!114 &114585728717436086
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1021990234759536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee488707673fcf24a8d407394469828c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoints: 5
+  tagName: HeroWeapon
 --- !u!136 &136508389352803416
 CapsuleCollider:
   m_ObjectHideFlags: 1
