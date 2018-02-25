@@ -2124,7 +2124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee488707673fcf24a8d407394469828c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 5
+  hitPoints: 2
   tagName: HeroWeapon
 --- !u!136 &136508389352803416
 CapsuleCollider:

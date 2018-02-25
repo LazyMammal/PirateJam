@@ -5,12 +5,27 @@ public class Spawner : MonoBehaviour
     public GameObject[] prefabs;
     public Collider[] spawnRegions;
     public Transform objParent = null;
-    bool randomHeight = true;
+    public bool randomHeight = true, respawn = false;
 
     public int maxPopulation = 10;
     void Start()
     {
-        for (int i = 0; i < maxPopulation; i++)
+        SpawnSome(maxPopulation);
+        if (objParent == null)
+            objParent = transform;
+    }
+    void Update()
+    {
+        if (respawn)
+        {
+            int popDiff = maxPopulation - objParent.childCount;
+            if (popDiff > 0)
+                SpawnSome(popDiff);
+        }
+    }
+    void SpawnSome(int popSize)
+    {
+        for (int i = 0; i < popSize; i++)
         {
             GameObject prefab = prefabs[Random.Range(0, prefabs.Length)];
             Collider spawnRegion = spawnRegions[Random.Range(0, spawnRegions.Length)].GetComponent<Collider>();
@@ -27,8 +42,9 @@ public class Spawner : MonoBehaviour
                 if (randomHeight)
                     pos.y = Random.Range(pos.y, spawnRegion.bounds.max.y);
                 GameObject go = Instantiate(prefab, pos, Quaternion.identity);
-                go.transform.parent = objParent ? objParent : transform;
+                go.transform.parent = objParent;
             }
         }
+
     }
 }

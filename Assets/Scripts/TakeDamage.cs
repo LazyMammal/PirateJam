@@ -25,10 +25,12 @@ public class TakeDamage : MonoBehaviour
             {
                 anim.SetTrigger("damage");
             }
-            else
+            else if(hitPoints == 0)
             {
                 anim.SetTrigger("pushback");
+			} else {
                 // TODO: fall to pieces
+				GameObject.Destroy(gameObject);
             }
         }
     }
