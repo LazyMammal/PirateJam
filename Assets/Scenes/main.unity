@@ -1833,42 +1833,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1973211235 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1618036354948814, guid: 728dea89f6e48a7488398f7dfe32444d,
-    type: 2}
-  m_PrefabInternal: {fileID: 7160435}
---- !u!54 &1973211236
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1973211235}
-  serializedVersion: 2
-  m_Mass: 100
-  m_Drag: 0.25
-  m_AngularDrag: 0.25
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 80
-  m_CollisionDetection: 0
---- !u!114 &1973211237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1973211235}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea288985553b87d4294deddcca9d1b49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxSpeed: 15
-  maxTorque: 0.5
-  minTime: 2.5
-  maxTime: 5.5
-  probeDistance: 30
 --- !u!1 &1979212005
 GameObject:
   m_ObjectHideFlags: 0

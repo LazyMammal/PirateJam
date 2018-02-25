@@ -5,9 +5,11 @@ using UnityEngine.AI;
 public class TakeDamage : MonoBehaviour
 {
     public int hitPoints = 5;
+    public float sinkRate = 0.5f, destroyDepth = 2f;
     public string tagName = "HeroWeapon";
     private NavMeshAgent agent;
     private Animator anim;
+    private bool dead = false;
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -17,7 +19,8 @@ public class TakeDamage : MonoBehaviour
     {
         if (other.tag == tagName)
         {
-			agent.ResetPath();
+			if(agent.enabled)
+	            agent.ResetPath();
             anim.SetBool("move", false);
             hitPoints -= 1;
 
@@ -25,13 +28,30 @@ public class TakeDamage : MonoBehaviour
             {
                 anim.SetTrigger("damage");
             }
-            else if(hitPoints == 0)
+            else if (hitPoints == 0)
             {
                 anim.SetTrigger("pushback");
-			} else {
-                // TODO: fall to pieces
-				GameObject.Destroy(gameObject);
+                GetComponent<NavFollowTarget>().active = false;
+				agent.enabled = false;
             }
+            else if (!dead)
+            {
+                dead = true;
+                anim.SetTrigger("death");
+            }
+        }
+    }
+
+    void Update()
+    {
+        if (dead)
+        {
+            Vector3 pos = transform.position;
+            pos.y -= sinkRate * Time.deltaTime;
+            transform.position = pos;
+			float terrainY = Terrain.activeTerrain.transform.TransformPoint(0f, Terrain.activeTerrain.SampleHeight(pos), 0f).y;
+            if (pos.y < terrainY - destroyDepth)
+                GameObject.Destroy(gameObject);
         }
     }
 }

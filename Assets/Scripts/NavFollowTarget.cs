@@ -4,6 +4,7 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class NavFollowTarget : MonoBehaviour
 {
+    public bool active = true;
     public Transform target;
     Vector3 destination;
     NavMeshAgent agent;
@@ -18,7 +19,7 @@ public class NavFollowTarget : MonoBehaviour
 
     void Update()
     {
-        if (Vector3.Distance(destination, target.position) > 1.0f)
+        if (active && Vector3.Distance(destination, target.position) > 1.0f)
         {
             destination = target.position;
             agent.SetDestination(destination);

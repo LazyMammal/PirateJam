@@ -14,8 +14,8 @@ public class NavAnimation : MonoBehaviour
 
     void Update()
     {
-		bool move = agent.velocity.magnitude > agent.radius && agent.remainingDistance > agent.radius;
-		anim.SetBool("move", move);
+        bool move = agent.velocity.magnitude > agent.radius && agent.remainingDistance > agent.radius;
+        anim.SetBool("move", move);
         anim.SetFloat("velx", agent.velocity.x);
         anim.SetFloat("vely", agent.velocity.y);
     }
