@@ -20,8 +20,8 @@ public class SardineBoidsController : MonoBehaviour {
 				for (int i=0; i<maxXNum; i++) {
 					int sNum=k*maxXNum*maxYNum+j*maxXNum+i;
 					sardines[sNum]=(GameObject)GameObject.Instantiate (sardinePrefab, transform.position+Vector3.right*i+Vector3.up*j+Vector3.forward*k, transform.rotation);
-					Collider[] cols=sardines[k*maxXNum*maxYNum+j*maxXNum+i].GetComponentsInChildren<Collider>();
-					foreach(Collider col in cols){
+					sardines[sNum].transform.parent = transform;
+					foreach(Collider col in sardines[sNum].GetComponentsInChildren<Collider>()){
 						col.name="SardineCol";
 					}
 				}
