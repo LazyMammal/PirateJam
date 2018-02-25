@@ -633,12 +633,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabs:
-  - {fileID: 1161187440723902, guid: cb05632eaec74d04ea1e7392dd5babf0, type: 2}
+  - {fileID: 1863230434665402, guid: cb05632eaec74d04ea1e7392dd5babf0, type: 2}
   - {fileID: 1751344196372334, guid: 8fab6f06c4bf9ef4f82351e3075c3216, type: 2}
   spawnRegions:
   - {fileID: 1865873395}
   objParent: {fileID: 0}
-  maxPopulation: 50
+  maxPopulation: 500
 --- !u!1 &521886012
 GameObject:
   m_ObjectHideFlags: 0
@@ -1406,8 +1406,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1028682793}
-  m_LocalRotation: {x: -0.038879044, y: -0.43391493, z: 0.018746635, w: -0.8999194}
-  m_LocalPosition: {x: -1.638959, y: 0.17918374, z: 0.16966319}
+  m_LocalRotation: {x: 0.470019, y: 0.005929263, z: 0.003157761, w: -0.88263077}
+  m_LocalPosition: {x: 0.011816286, y: -0.45127696, z: -0.40434158}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1001733835}
@@ -1776,7 +1776,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!20 &1696989078
 Camera:
   m_ObjectHideFlags: 0
@@ -2314,7 +2314,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2060932543
 Transform:
   m_ObjectHideFlags: 0
