@@ -5,6 +5,7 @@ public class Spawner : MonoBehaviour
     public GameObject[] prefabs;
     public Collider[] spawnRegions;
     public Transform objParent = null;
+    bool randomHeight = true;
 
     public int maxPopulation = 10;
     void Start()
@@ -23,7 +24,8 @@ public class Spawner : MonoBehaviour
 
             if (pos.y < spawnRegion.bounds.max.y)
             {
-                pos.y = Random.Range(pos.y, spawnRegion.bounds.max.y);
+                if (randomHeight)
+                    pos.y = Random.Range(pos.y, spawnRegion.bounds.max.y);
                 GameObject go = Instantiate(prefab, pos, Quaternion.identity);
                 go.transform.parent = objParent ? objParent : transform;
             }
