@@ -2,12 +2,24 @@
 
 public class GameController : MonoBehaviour
 {
+    public Camera mainCam, fishCam;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             PauseGame();
         }
+
+        if (Input.GetKeyDown(KeyCode.F2))
+        {
+            SwitchCamera();
+        }
+    }
+
+    public void SwitchCamera()
+    {
+        mainCam.gameObject.SetActive(false);
+        fishCam.gameObject.SetActive(true);
     }
 
     public void PauseGame()

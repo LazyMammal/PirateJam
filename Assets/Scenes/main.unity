@@ -1406,8 +1406,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1028682793}
-  m_LocalRotation: {x: 0.470019, y: 0.005929263, z: 0.003157761, w: -0.88263077}
-  m_LocalPosition: {x: 0.011816286, y: -0.45127696, z: -0.40434158}
+  m_LocalRotation: {x: -0.0054475325, y: -0.27788633, z: 0.0015767934, w: -0.9605972}
+  m_LocalPosition: {x: 5.464035, y: 4.3886647, z: 299.98068}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1001733835}
@@ -2077,6 +2077,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078ac2aa7b87a494497e4edb6cfdd034, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainCam: {fileID: 1696989078}
+  fishCam: {fileID: 2060932547}
 --- !u!4 &1866789329
 Transform:
   m_ObjectHideFlags: 0
