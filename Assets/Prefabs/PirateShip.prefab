@@ -70,6 +70,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4829431339645794}
+  - component: {fileID: 54455586112146762}
+  - component: {fileID: 114123649207582122}
   m_Layer: 0
   m_Name: PirateShip
   m_TagString: Untagged
@@ -366,6 +368,37 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1638443168321816}
   m_Mesh: {fileID: 4300006, guid: fec50f065bc49a64aa08e710ff590773, type: 3}
+--- !u!54 &54455586112146762
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1618036354948814}
+  serializedVersion: 2
+  m_Mass: 100
+  m_Drag: 0.25
+  m_AngularDrag: 0.25
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 80
+  m_CollisionDetection: 0
+--- !u!114 &114123649207582122
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1618036354948814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea288985553b87d4294deddcca9d1b49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpeed: 15
+  maxTorque: 0.5
+  minTime: 2.5
+  maxTime: 5.5
+  probeDistance: 30
 --- !u!208 &208761116953221272
 NavMeshObstacle:
   m_ObjectHideFlags: 1
