@@ -508,6 +508,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   axeIdle: {fileID: 4276333840558444}
   axeSwing: {fileID: 4467561634477728}
+  attackSpeed: 7
+  returnSpeed: 3
 --- !u!136 &136034795709828810
 CapsuleCollider:
   m_ObjectHideFlags: 1
