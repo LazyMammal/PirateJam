@@ -5,7 +5,7 @@ public class GameController : MonoBehaviour
     public Camera mainCam, fishCam;
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.F1))
         {
             PauseGame();
         }

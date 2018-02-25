@@ -70,6 +70,7 @@ GameObject:
   - component: {fileID: 54164911353310646}
   - component: {fileID: 195612056879863358}
   - component: {fileID: 114123942428920516}
+  - component: {fileID: 114090046011186496}
   m_Layer: 0
   m_Name: Skeletor
   m_TagString: Untagged
@@ -1625,7 +1626,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1021990234759536}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20.517654, y: 4.035624, z: -57.756}
+  m_LocalPosition: {x: 105.6, y: 4.035624, z: -11.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4862706744772730}
@@ -2079,7 +2080,7 @@ Animator:
   m_GameObject: {fileID: 1017887000925408}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 39d03f82786b57d41af8bd27bce84402, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e008269d2da3bfc429d3029921b2eb40, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2087,6 +2088,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114090046011186496
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1021990234759536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20a8be16013e28d43af22fa79a5915de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114123942428920516
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2218,7 +2230,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 3
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
