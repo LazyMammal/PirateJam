@@ -20,7 +20,22 @@ ModelImporter:
     3300002: sub02
     4300000: sub01
     4300002: sub02
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bones___Vray
+    second: {fileID: 2100000, guid: 704b2bf8818758f4983847616a6424cd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brown___Vray
+    second: {fileID: 2100000, guid: 704b2bf8818758f4983847616a6424cd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White___Vray
+    second: {fileID: 2100000, guid: 704b2bf8818758f4983847616a6424cd, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
