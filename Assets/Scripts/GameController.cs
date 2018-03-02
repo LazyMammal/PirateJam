@@ -5,7 +5,7 @@ public class GameController : MonoBehaviour
     public Camera mainCam, fishCam;
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F1))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             PauseGame();
         }
@@ -24,15 +24,7 @@ public class GameController : MonoBehaviour
 
     public void PauseGame()
     {
-        // save any game data here
-#if UNITY_EDITOR
-        // Application.Quit() does not work in the editor so
-        // UnityEditor.EditorApplication.isPlaying need to be set to false to end the game
-        UnityEditor.EditorApplication.isPaused = true;
-#else
-        Application.PauseGame();
-#endif
-
+        Time.timeScale = 1f - Time.timeScale;
     }
 
     public void QuitGame()
@@ -43,7 +35,7 @@ public class GameController : MonoBehaviour
         // UnityEditor.EditorApplication.isPlaying need to be set to false to end the game
         UnityEditor.EditorApplication.isPlaying = false;
 #else
-         Application.Quit();
+        Application.Quit();
 #endif
 
     }
