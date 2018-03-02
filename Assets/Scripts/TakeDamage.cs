@@ -17,10 +17,10 @@ public class TakeDamage : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == tagName)
+        if (other.tag == tagName && Input.GetButton("Fire1"))
         {
-			if(agent.enabled)
-	            agent.ResetPath();
+            if (agent.enabled)
+                agent.ResetPath();
             anim.SetBool("move", false);
             hitPoints -= 1;
 
@@ -31,14 +31,14 @@ public class TakeDamage : MonoBehaviour
             else if (hitPoints == 0)
             {
                 anim.SetTrigger("pushback");
-                GetComponent<NavFollowTarget>().active = false;
-				agent.enabled = false;
             }
             else if (!dead)
             {
                 dead = true;
-                anim.SetTrigger("death");
+                agent.enabled = false;
+                GetComponent<NavFollowTarget>().active = false;
                 GetComponent<CapsuleCollider>().enabled = false;
+                anim.SetTrigger("death");
             }
         }
     }
@@ -50,7 +50,7 @@ public class TakeDamage : MonoBehaviour
             Vector3 pos = transform.position;
             pos.y -= sinkRate * Time.deltaTime;
             transform.position = pos;
-			float terrainY = Terrain.activeTerrain.transform.TransformPoint(0f, Terrain.activeTerrain.SampleHeight(pos), 0f).y;
+            float terrainY = Terrain.activeTerrain.transform.TransformPoint(0f, Terrain.activeTerrain.SampleHeight(pos), 0f).y;
             if (pos.y < terrainY - destroyDepth)
                 GameObject.Destroy(gameObject);
         }
