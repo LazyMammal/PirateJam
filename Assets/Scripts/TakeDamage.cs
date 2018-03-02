@@ -38,6 +38,7 @@ public class TakeDamage : MonoBehaviour
             {
                 dead = true;
                 anim.SetTrigger("death");
+                GetComponent<CapsuleCollider>().enabled = false;
             }
         }
     }
